@@ -1,0 +1,8 @@
+name: Drupal Camp Example
+type: module
+description: 'Drupal Camp'
+core: 8.x
+package: Drupal Camp
+dependencies:
+    - node
+    - user

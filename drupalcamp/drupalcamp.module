@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Contains drupalcamp.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function drupalcamp_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the drupalcamp module.
+    case 'help.page.drupalcamp':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('2016 MidCamp') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_local_tasks_alter().
+ *
+ * To change properties of local tasks defined by other modules, use the hook
+ * hook_local_tasks_alter. Using this hook, the developer has access to the
+ * local tasks currently defined. Many properties of the defined local task can
+ * be altered.
+ *
+ * In the example below, we are changing the 'Settings' tab on the Appearance
+ * section to 'Theme Settings'
+ */
+function drupalcamp_local_tasks_alter(&$local_tasks) {
+  $local_tasks['system.theme_settings']['title'] = t('Theme Settings');
+}
+
+/**
+ * Implements hook_cron().
+ */
+function drupalcamp_cron() {
+  // Do your stuff here.
+
+  // ...
+
+  // Log this running in Recent Log Messages
+  \Drupal::logger('midcamp')->notice('Midcamp cron ran');
+
+}

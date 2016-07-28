@@ -1,0 +1,122 @@
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/drupalcamp/table, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\drupalcamp\Controller\TableController")
+# and a method ("generateTable").
+drupalcamp.table_controller_generateTable:
+  path: 'drupalcamp/table'
+  defaults:
+    _controller: '\Drupal\drupalcamp\Controller\TableController::generateTable'
+    _title: 'Table'
+  requirements:
+    _permission: 'access content'
+
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/drupalcamp/link, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\drupalcamp\Controller\LinkController")
+# and a method ("generateLinks").
+drupalcamp.link_controller_generateLinks:
+  path: 'drupalcamp/link'
+  defaults:
+    _controller: '\Drupal\drupalcamp\Controller\LinkController::generateLinks'
+    _title: 'Link Examples'
+  requirements:
+    _permission: 'access content'
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/drupalcamp/lists, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\drupalcamp\Controller\ListController")
+# and a method ("generateLists").
+drupalcamp.list_controller_generateLists:
+  path: 'drupalcamp/lists'
+  defaults:
+    _controller: '\Drupal\drupalcamp\Controller\ListController::generateLists'
+    _title: 'Lists'
+  requirements:
+    _permission: 'access content'
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/drupalcamp/counter/{node}, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\drupalcamp\Controller\UpdateCountController")
+# and a method ("updateCounter").
+drupalcamp.update_count_controller_updateCounter:
+  path: 'drupalcamp/counter/{nid}'
+  defaults:
+    _controller: '\Drupal\drupalcamp\Controller\UpdateCountController::updateCounter'
+    _title: 'Updating Counter on Node'
+  requirements:
+    _permission: 'access content'
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/drupalcamp/count3, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\drupalcamp\Controller\QueryNodesController")
+# and a method ("count3").
+drupalcamp.query_nodes_controller_count3:
+  path: 'drupalcamp/count3'
+  defaults:
+    _controller: '\Drupal\drupalcamp\Controller\QueryNodesController::count3'
+    _title: 'Articles with more than 3 counter value'
+  requirements:
+    _permission: 'access content'
+
+
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/drupalcamp/create-press/{count}, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\drupalcamp\Controller\CreatePressController")
+# and a method ("create").
+drupalcamp.create_press_controller_create:
+  path: 'drupalcamp/create-press/{count}'
+  defaults:
+    _controller: '\Drupal\drupalcamp\Controller\CreatePressController::createPressReleases'
+    _title: 'Create Press Releases'
+  requirements:
+    _permission: 'access content'
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/drupalcamp/view-result-nids, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\drupalcamp\Controller\ViewResultController")
+# and a method ("latestPressReleases").
+drupalcamp.get_node_ids_of_view_result:
+  path: 'drupalcamp/view-result-nids'
+  defaults:
+    _controller: '\Drupal\drupalcamp\Controller\ViewResultController::latestPressReleases'
+    _title: 'Node IDs of Latest Press Releases'
+  requirements:
+    _permission: 'access content'

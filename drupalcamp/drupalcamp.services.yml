@@ -1,0 +1,10 @@
+services:
+  drupalcamp.route_subscriber:
+    class: Drupal\drupalcamp\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  drupalcamp.create.pressrelease:
+    class: Drupal\drupalcamp\CreatePressReleaseService
+    arguments: []
+
